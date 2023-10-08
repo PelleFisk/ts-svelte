@@ -26,7 +26,7 @@
     { "clicked 10000 times": 10000 },
   ];
 
-  /*const loadSave = localStorage.getItem("cookies");
+  const loadSave = localStorage.getItem("cookies");
 
   if (loadSave) {
     const parseJSON = JSON.parse(loadSave);
@@ -39,7 +39,7 @@
     farm = parseJSON.farm;
     farmPrice = parseJSON.farmPrice;
     grandmaPrice = parseJSON.grandmaPrice;
-  }*/
+  }
 
   setInterval(() => {
     cps();
@@ -50,7 +50,7 @@
     lifeTimeCookies++;
     timesClicked++;
     CheckAchivments(timesClicked);
-    //saveData();
+    saveData();
   }
 
   function buyCursors() {
@@ -59,7 +59,7 @@
       cursor++;
       cookies -= cursorPrice;
       cursorPrice += 2;
-      //saveData();
+      saveData();
     } else {
       alert("You Dont Have Enough Cookies");
     }
@@ -70,7 +70,7 @@
       grandmas++;
       cookies -= grandmaPrice;
       grandmaPrice += 2;
-      //saveData();
+      saveData();
     } else {
       alert("You Dont Have Enough Cookies");
     }
@@ -82,7 +82,7 @@
       farm++;
       cookies -= farmPrice;
       farmPrice += 100;
-      //saveData();
+      saveData();
     } else {
       alert("You Dont Have Enough Cookies");
     }
@@ -136,7 +136,7 @@
     });
   }
 
-  /*function saveData() {
+  function saveData() {
     localStorage.setItem(
       "cookies",
       JSON.stringify({
@@ -152,7 +152,7 @@
         farmPrice,
       })
     );
-  }*/
+  }
 </script>
 
 <TailwindCss />
